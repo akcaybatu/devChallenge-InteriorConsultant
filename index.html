@@ -8,13 +8,23 @@
     <title>Interior Consultant Page</title>
 </head>
 <body>    
-    <div class="nav">
+    <div class="nav" id="navigation">
         <a class="title" href="#thisinterior">THIS INTERIOR</a>
         <div class="nav-elements">
             <a class="element" href="#home">Home</a>
             <a class="element" href="#news">Collection</a>
             <a class="element" href="#contact">About</a>
             <a class="element" href="#about">Contact</a>
+        </div>
+        <span id="menu-bar" onclick="openNav()">&#9776; </span>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a class="element-mobile" href="#home">Home</a>
+                <a class="element-mobile" href="#news">Collection</a>
+                <a class="element-mobile" href="#contact">About</a>
+                <a class="element-mobile" href="#about">Contact</a>
+            </div>
         </div>
     </div>    
     <div class="content">

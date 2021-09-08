@@ -44,8 +44,56 @@ html, body{
     line-height: 22px;
 }
 
+#menu-bar{
+    display: none;
+    font-size: 25px;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    font-family: Montserrat;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    margin-top: 20px;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
 .content{
     display: flex;
+    justify-content: space-between;
     height: 80%;
     margin: 0 80px;
 }
@@ -54,7 +102,6 @@ html, body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
     color: #FFFFFF;
 }
 
@@ -67,7 +114,6 @@ html, body{
 }
 
 .content .text-content .information{
-    width: 500px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -83,11 +129,8 @@ html, body{
     line-height: 22px;
 }
 
-.image-content{
-    position: relative;
-}
-
 .content .image-content{
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -190,7 +233,7 @@ html, body{
     text-decoration: none;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1450px){
+@media screen and (min-width: 1250px) and (max-width: 1450px){
     .content .text-content h1{
         font-size: 38px;
         line-height: 61px;
@@ -207,8 +250,224 @@ html, body{
     }    
 
     .content .image-content .room-img{
-        width: 621.11px;
-        height: 386.53px;
+        width: 651.11px;
+        height: 416.53px;
         transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    .designer-content{
+        bottom: 60px;
+        right: 20px;
+    }
+
+    .designer-info .designer-picture{
+        width: 75px;
+        height: 62px;
+        height:80px;
+        width:80px;
+    }
+    
+    .designer-info .designer-name{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    
+    .designer-info .designer-title{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    
+    .designer-content .designer-info{
+        font-size: 20px;
+        line-height: 27px;
+    }
+    
+    .design-date{
+        font-size: 16px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1250px){
+    .content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav .nav-elements .element{
+        font-size: 12px;
+        margin: 0 25px;
+    }
+
+    .content .text-content h1{
+        font-size: 30px;
+        line-height: 55px;
+    }
+    
+    .content .text-content .information{
+        font-size: 12px;
+        line-height: 24px;
+    }
+    
+    .content .text-content .read-more{
+        font-size: 9px;
+        line-height: 18px;
+    }    
+
+    .content .image-content .room-img{
+        width: 521.11px;
+        height: 326.53px;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    .designer-content{
+        bottom: 30px;
+        padding: 10px;
+    }
+
+    .designer-info .designer-picture{
+        width: 55px;
+        height: 42px;
+        height:60px;
+        width:60px;
+    }
+    
+    .designer-info .designer-name{
+        font-size: 12px;
+        line-height: 17px;
+    }
+    
+    .designer-info .designer-title{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    .designer-content .designer-info{
+        font-size: 18px;
+        line-height: 27px;
+    }
+    
+    .design-date{
+        font-size: 14px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 760px){
+    .nav{
+        margin: 0;
+    }
+
+    .nav .nav-elements{
+        display: none;
+    }
+
+    #menu-bar{
+        display: block;
+        color: #FFFFFF;
+        margin: 0 20px;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .content .text-content h1{
+        font-size: 30px;
+        line-height: 55px;
+    }
+    
+    .content .text-content .information{
+        font-size: 12px;
+        line-height: 24px;
+    }
+    
+    .content .text-content .read-more{
+        font-size: 9px;
+        line-height: 18px;
+    }    
+
+    .content .image-content .room-img{
+        width: 330.11px;
+        height: 300.53px;
+    }
+
+    .content{
+        margin: auto 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .designer-content{
+        bottom: -10px;
+    }
+
+    .designer-info .designer-picture{
+        width: 45px;
+        height: 37px;
+    }
+    
+    .designer-info .designer-name{
+        font-size: 7px;
+        line-height: 9px;
+    }
+    
+    .designer-info .designer-title{
+        font-size: 7px;
+        line-height: 9px;
+    }
+    
+    .designer-content .designer-info{
+        font-size: 10px;
+        line-height: 14px;
+    }
+    
+    .design-date{
+        font-size: 7px;
+        line-height: 9px;
+    }
+
+    #footer p{
+        font-size: 10px;
+        line-height: 17px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .content .image-content .room-img{
+        width: 280.11px;
+        height: 200.53px;
+    }
+
+    .designer-content{
+        padding: 7px;
+    }
+
+    .designer-info .designer-picture{
+        width: 25px;
+        height: 24px;
+    }
+    
+    .designer-info .designer-name{
+        font-size: 5px;
+        line-height: 6px;
+    }
+    
+    .designer-info .designer-title{
+        font-size: 5px;
+        line-height: 6px;
+    }
+    
+    .designer-content .designer-info{
+        font-size: 8px;
+        line-height: 10px;
+    }
+    
+    .design-date{
+        font-size: 5px;
+        line-height: 6px;
     }
 }
