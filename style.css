@@ -142,7 +142,6 @@ html, body{
 
 .content .image-content .room-img{
     width: 821.11px;
-    height: 586.53px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
@@ -269,7 +268,7 @@ html, body{
 }
 
 /*media queries*/
-@media screen and (min-width: 1250px) and (max-width: 1450px){
+@media screen and (min-width: 1200px) and (max-width: 1450px){
     .content .text-content h1{
         font-size: 38px;
         line-height: 61px;
@@ -295,6 +294,34 @@ html, body{
         bottom: 60px;
         right: 20px;
     }
+
+    .designer-info .designer-picture{
+        width: 75px;
+        height: 62px;
+        height:80px;
+        width:80px;
+    }
+
+    .designer-info .designer-name{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .designer-info .designer-title{
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    .designer-content .designer-info{
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .design-date{
+        font-size: 14px;
+        line-height: 27px;
+    }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1200px){
     .content{
