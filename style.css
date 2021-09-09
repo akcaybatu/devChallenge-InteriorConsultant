@@ -269,6 +269,33 @@ html, body{
 }
 
 /*media queries*/
+@media screen and (min-width: 1250px) and (max-width: 1450px){
+    .content .text-content h1{
+        font-size: 38px;
+        line-height: 61px;
+    }
+
+    .content .text-content .information{
+        font-size: 14px;
+        line-height: 29px;
+    }
+
+    .content .text-content .read-more{
+        font-size: 11px;
+        line-height: 22px;
+    }    
+
+    .content .image-content .room-img{
+        width: 620.11px;
+        height: 400.53px;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    .designer-content{
+        bottom: 60px;
+        right: 20px;
+    }
+
 @media screen and (min-width: 768px) and (max-width: 1200px){
     .content{
         flex-wrap: wrap;
