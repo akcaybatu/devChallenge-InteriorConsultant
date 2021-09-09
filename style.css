@@ -9,6 +9,7 @@ html, body{
     margin: 0;
 }
 
+/*navigation bar*/
 .nav{
     display: flex;
     justify-content: space-between;
@@ -36,6 +37,7 @@ html, body{
 }
 
 .nav .element{
+    position: relative;
     margin: 0 40px;
     font-family: Montserrat;
     font-style: normal;
@@ -43,6 +45,7 @@ html, body{
     font-size: 18px;
     line-height: 22px;
 }
+/*mobile navigation bar*/
 
 #menu-bar{
     display: none;
@@ -60,17 +63,17 @@ html, body{
     overflow-x: hidden;
     transition: 0.5s;
     font-family: Montserrat;
-  }
+}
   
-  .overlay-content {
+.overlay-content {
     position: relative;
     top: 25%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
-  }
+}
   
-  .overlay a {
+.overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
@@ -78,19 +81,20 @@ html, body{
     display: block;
     margin-top: 20px;
     transition: 0.3s;
-  }
+}
   
-  .overlay a:hover, .overlay a:focus {
+.overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
-  }
+}
   
-  .overlay .closebtn {
+.overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
-  }
+}
 
+/*text content and display*/
 .content{
     display: flex;
     justify-content: space-between;
@@ -129,6 +133,7 @@ html, body{
     line-height: 22px;
 }
 
+/*room image content and display*/
 .content .image-content{
     position: relative;
     display: flex;
@@ -141,6 +146,7 @@ html, body{
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
+/*designer's card contents*/
 .designer-content{
     position: absolute;
     display: flex;
@@ -208,6 +214,7 @@ html, body{
     line-height: 31px;
 }
 
+/*footer*/
 #footer{
     position: absolute;
     bottom: 0;
@@ -233,62 +240,36 @@ html, body{
     text-decoration: none;
 }
 
-@media screen and (min-width: 1250px) and (max-width: 1450px){
-    .content .text-content h1{
-        font-size: 38px;
-        line-height: 61px;
-    }
-    
-    .content .text-content .information{
-        font-size: 14px;
-        line-height: 29px;
-    }
-    
-    .content .text-content .read-more{
-        font-size: 11px;
-        line-height: 22px;
-    }    
+/*navigation bar hover effect*/
+.element{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
 
-    .content .image-content .room-img{
-        width: 651.11px;
-        height: 416.53px;
-        transform: matrix(-1, 0, 0, 1, 0, 0);
-    }
-
-    .designer-content{
-        bottom: 60px;
-        right: 20px;
-    }
-
-    .designer-info .designer-picture{
-        width: 75px;
-        height: 62px;
-        height:80px;
-        width:80px;
-    }
-    
-    .designer-info .designer-name{
-        font-size: 14px;
-        line-height: 17px;
-    }
-    
-    .designer-info .designer-title{
-        font-size: 14px;
-        line-height: 15px;
-    }
-    
-    .designer-content .designer-info{
-        font-size: 20px;
-        line-height: 27px;
-    }
-    
-    .design-date{
-        font-size: 16px;
-        line-height: 27px;
-    }
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+.element:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.element:hover:after { 
+    width: 100%; 
+    left: 0; 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1250px){
+/*media queries*/
+@media screen and (min-width: 768px) and (max-width: 1200px){
     .content{
         flex-wrap: wrap;
         justify-content: center;
@@ -296,7 +277,7 @@ html, body{
 
     .nav .nav-elements .element{
         font-size: 12px;
-        margin: 0 25px;
+        margin: 0 2px;
     }
 
     .content .text-content h1{
@@ -317,7 +298,6 @@ html, body{
     .content .image-content .room-img{
         width: 521.11px;
         height: 326.53px;
-        transform: matrix(-1, 0, 0, 1, 0, 0);
     }
 
     .designer-content{
